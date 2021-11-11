@@ -1,0 +1,6 @@
+1. The views is basically the frontend of the node app
+2. The model has to do with the description of the structure of data which the application uses
+3. The controller basically plugs together the model and the view
+	Incoporates the Routes and Middlewares
+	Handles what should be displayed when a route is hit
+4. Create seperate folders to hold models, views and controllers

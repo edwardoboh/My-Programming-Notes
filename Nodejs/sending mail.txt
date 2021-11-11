@@ -1,0 +1,5 @@
+1. SendGrid - a service for sending email
+2. Works together with nodemailer and nodemailer-sendgrid-transport
+3. Call the .createTransport methode on nodemailer passing in the nodemailer-sendgrid-transport
+	const transport = nodemailer.createTransport(nodemailer-sendgrid-transport({[properties goes here]}))
+4. Now to send mail, use trnasport.sendMail({[properties go here]})

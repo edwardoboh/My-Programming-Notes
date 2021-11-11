@@ -1,0 +1,17 @@
+* A common package for encrypting passwords is: bcryptjs
+* To encrypt a password use: bcrypt.hash([password], [salt])
+	~ the salt is the rounds inwhich the hashing is to be done
+	~ the above command is asyncronous and returns a promise
+* During signin, to compare an existing harshed password with the entered one, use:
+	~ bcrypt.compare([entered_password], [harshed_password])
+* A good way to protect routes is to use auth middlewares instead of hidding components with if statement
+* CSRF - Cross Site Request Forgery: where a user is tricked into using a site that looks like our but is not
+	~ by taking advantage of the fact that a user is logged in and manipulating sessions
+* To protect against CSRF we must ensure our sessions are only available for our views
+	~ Ensuring that the session is only used when the user is in our pages
+	~ We can do this with the help of CSRF Tokens
+* A module to help us do the is: csurf
+* To make use of csurf we: csrf = csurf()
+	~ we write the above code after we declared our express session since the session is the defualt storage
+	~ using: app.use(csrf)
+* The csrf looks for a token for every post request since the post request changes data

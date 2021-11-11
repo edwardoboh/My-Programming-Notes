@@ -1,0 +1,19 @@
+1. Check the Golang documentation for instruction on installing go
+2. We'll be using a third party router called mux, which is popullar for goLang development
+3. To install it run: go get -u github.com/gorilla/mux
+4. Create a project in our Go Path [Go path]/src/github.com/[username]
+5. To set our Go Path, run: export GOPATH=$HOME/go
+6. Create main.go file. Inside it, use: package main and: import("fmt")
+7. create a main function using: func main(){}
+8. print out using: fmt.Println()
+9. run the program using: go run main.go
+10. to build the project, use: go build
+11. to run our build, we use: ./[name of the build file]
+12. We'll be needing to import the following packages to work build a rest API
+	a. encoding/json
+	b. log
+	c. net/http
+	d. math/rand
+	e. strconv
+	f. github.com/gorilla/mux
+13. First thing is to init the mux router using: r := mux.NewRouter() 

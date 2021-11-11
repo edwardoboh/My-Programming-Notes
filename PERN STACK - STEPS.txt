@@ -1,0 +1,5 @@
+PERN STACK - TUTORIAL
+1. Download PostGress db for windows
+2. Add "psql" to path
+3. Default username "postgres", default db "postgres", default port "5432"
+4. \? to list out all postgres commands

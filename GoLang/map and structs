@@ -1,0 +1,16 @@
+1. maps in GO are like
+    nMap := map[string]int{
+        "string_key": int_value,
+        "string_key": int_value,
+        "string_key": int_value,
+    }
+   *. We can use any key type for the man and any value type
+   *. all keys must be of type that can be tested for equality
+   *. type like slice cannot be a key but an array can be a key
+   *. we can also create maps using the make function
+        nMap := make(map[string]int)
+   *. reference value in map using nMap["string_key"]
+   *. can also assing it using nMap["string_key"] = [can be a new value not in map]
+   *. return order of a map is not guaranteed
+   *. pop, ok = nMap["abscent_key"] - here, ok would be false if key does not exist
+   *. 

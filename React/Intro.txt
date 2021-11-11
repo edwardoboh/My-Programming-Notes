@@ -1,0 +1,21 @@
+1. Importing and exporting
+	~ With : export const funcName = () => {}
+	~ We can import using the following methods
+		import {funcName as funcN} from '[path to file]'
+		import * as funcN from '[path to file]'
+2. Classes serve as blueprints for javascript objects
+3. Creating a Class: class ClassName {}
+4. Inheritance: class ClassName extends SupClass {}
+5. Using Constructors in JavaScript:
+	~ class ClassName {
+			constructor(){}
+		}
+6. Remember to call super class using: super() inside the constructor of the subClass
+7. === tests for type and value equality
+8. We have Reference and Primitive types
+	~ Numbers, Strings, Booleans are Primitive types. Whenever we store or reassign a variable to another variable, it would re-copy the value i.e Create a new copy for itself
+	~ Objects and Arrays are reference types. When you assign one object to another, it is the pointer in memory that is copied and shared around. A variables therefore points to the same thing
+9. To actually copy the content of an object or Array, we make use of the spread operator
+	~ newObject = { ...oldObject }
+	~ newArray = { ...oldArray }
+	~ This way, the content and not the pointer of the old array or object is copied to the new one.

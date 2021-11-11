@@ -1,0 +1,21 @@
+1. Ways to declare variables in GoLang:
+	~ var i int = 34 ::: Must use this method when declaring package level variables
+	~ var g int
+		g = 23
+	~ f := 23;
+2. Formatted printing:
+	~ fmt.Printf("%v %T", g, g): v represents value and T represents Type
+3. We can define a block of variables at the package level i.e Outside the main function
+	var (
+		i int = 3
+		h float32 = 4.1
+		s float64 = 23.3
+		name string = "name is apple"
+	)
+4. Shadowing: In GoLang, a variable can be redeclared more than once but not withing the same scope
+	~ We can declare a variable in the Package level and also declare it within a function scope.
+5. In GoLang, lowercase first letter package variable name are scoped to the package
+6. When we use Uppercase first letter for variable names, the Go compiler exposes it to the outside world
+7. To convert between string and number in Go, use the strconv.Itoa([integer to string]) package
+8. There are no private scope in Go
+9. 

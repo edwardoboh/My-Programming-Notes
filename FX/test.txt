@@ -1,0 +1,26 @@
+1. Create an indicator that give the average of the last five low
+2. In the five lows, find that with the highest value and label it an A then subsequent 
+	ones with subsequent letters
+
+
+
+Array = [2,1,5,8,3] => 2:0, 1:1, 5:2
+	[20, 11, 52, 83, 34]
+ArrayName = [A, B, C, D, E]
+
+sortedArray = [11,20,34,52,88] => 1:0, 2:1
+
+ArrayNew[Array[0]] = A
+ArrayNew[Array[1]] = B
+ArrayNew[Array[2]] = C
+
+ArrayNew[sortedArray[0]] = ?
+	(34253 * 10) + 1
+
+	Array = [2A,1B,5C,8D,3E]
+	ArrayName = [A, B, C, D, E]
+	sortedArray = [1B,2A,3E,5C,8D]
+	sortedArray = [1,2,3,5,8]
+	22 * 10 = 220 + 1 = 221
+		
+	11 % 10 = 1

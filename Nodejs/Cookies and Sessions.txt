@@ -1,0 +1,27 @@
+Cookie	-	Client Side
+Session	-	Server Side
+
+* Cookies are Stored on the client side in the browser
+	~ To Store a Cookie in Nodejs, use `res.setHeader('Set-Cookie', "key=value"; Secure[or HttpOnly or Max-Age or Expires])
+*To get a cookie saved on a user browser, use: req.get('Cookie')
+* Sessions are stored on the server side. In a Database
+* A common approach is to Store a Session on the server side and then stored the id of the session on the client browser
+	~ For security purposes, this ID stored on the client can be harshed to prevent it from being modified
+* For managing sessions, we need a package that helps us with it
+	~ npm install express-session
+	~ we make use of it as a middleware: app.use(session({secret: "your secret", resave: false}))
+	~ to set a value to the session, use: req.session.[key] = [value]
+	~ this sets a session to the req object of every incoming request
+	~ a cookie is automatically generated and saved in the user's browser. This contains the harshed session ID
+* To get back the session stored from the the request ogject, use: [value] = req.session.[key]
+* A package to help us store the session in a DB instead of memory is "connect-mongodb-session"
+	~ in this case to mongoDB
+	~ to set up the store, we: MongoDBStore = connect-mongodb-session(session)
+	~ then we call the constructor: store = new MongoDBStore({uri: [mongo DB uri], collection: [name of the collection]})
+	~ next we pass this 'store' object to the express-session object
+		:app.use(session({secret: "your secret", resave: false, saveUninitialized: false, store: store}))
+* To logout a user, we could simply delete the session coolie on the browser but the session is left hanging on the server with no cookie to identify it
+	~ A cleaner way is to use methods provided by express-session to cleanup session stored in the server
+	~ we can do this with: req.session.destroy((err) => {[callback function execution code]})
+* To ensure a session is saved to the store before performing any extra task, we can use: req.session.save(() => {})
+	~ It takes a callback function which is executed after session has been saved.

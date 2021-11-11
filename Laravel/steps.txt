@@ -1,0 +1,24 @@
+Steps For Laravel Instagram Project
+1. Install composer - PHP Package manager
+2. Install node and npm
+3. Install Laravel installer
+4. Create new Laravel Project - laravel new [project_name]
+5. php artisan - cli tool built into laravel
+6. php artisan serve - to run development server
+7. find html files in resource/views
+8. php artisan make:auth
+9. Install npm modules - npm install
+10. Now run - npm run dev - to compile css and js files
+11. compiled js files in public/js
+12. compiles css files in public/css
+13. Editable js file in resources/js
+14. Editable css files in resource/sass
+15. Create sqlite database in database directory: database/database.sqlite
+16. Database connection in .env file to sqlite
+17. run migration with - php artisan migrate
+18. Restart server when changes are made to .env file
+19. App heading/navbar code contained in resources/views/layouts/app.blade.php
+20. place svg icons in public folder
+21. App dashboard code contained in resource/views/home.blade.php
+22. Import extra google font.
+23. 
