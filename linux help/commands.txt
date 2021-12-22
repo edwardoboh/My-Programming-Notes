@@ -1,0 +1,8 @@
+sudo apt install tree
+tree [directory name]
+
+rsync -a [source] [destination]
+
+mv -f [source] [destination]
+
+cp -r [source] [destination]

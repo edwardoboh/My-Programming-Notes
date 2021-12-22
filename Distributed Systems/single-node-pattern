@@ -1,0 +1,2 @@
+1. The first example of a single node pattern is the sidecar pattern - main application in one container and another supporting application in another container
+2. Example use cases are: HTTP Proxying, Dynamic update of config file through API calls, 
